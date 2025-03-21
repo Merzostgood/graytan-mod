@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "id": "graytan",
+  "version": "v1.0",
+  "name": "Graytan",
+  "description": "idk, just a mod",
+  "authors": ["adamcowell14"],
+  "contact": {},
+  "license": "MIT",
+  "icon": "assets/graytan/icon.png",
+  "environment": "client",
+  "entrypoints": {
+    "client": [
+      "net.adamcowell14.graytan.GraytanClient"
+    ],
+    "modmenu": [
+      "net.adamcowell14.graytan.config.ModMenuIntegration"
+    ]
+  },
+  "mixins": [
+    "graytan.mixins.json",
+    {
+      "config": "graytan.client.mixins.json",
+      "environment": "client"
+    }
+  ],  "depends": {
+    "fabricloader": "*",
+    "fabric": "*",
+    "minecraft": "1.21.4",
+    "cloth-config": ">=17.0.142"
+  }
+}

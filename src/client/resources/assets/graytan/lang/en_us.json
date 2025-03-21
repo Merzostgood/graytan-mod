@@ -1,0 +1,12 @@
+{
+    "text.autoconfig.graytan.title": "Graytan",
+    "text.autoconfig.graytan.option.anti_tp": "Enable anti teleport (WIP)",
+    "text.autoconfig.graytan.option.fault_max": "Max fault (WIP)",
+    "text.autoconfig.graytan.option.places": "Places",
+    "text.autoconfig.graytan.option.ModPoint": "Place",
+    "text.autoconfig.graytan.option.ModPoint.name": "Place name",
+    "text.autoconfig.graytan.option.ModPoint.yaw": "Yaw",
+    "text.autoconfig.graytan.option.ModPoint.pitch": "Pitch",
+    "text.autoconfig.graytan.option.ModPoint.keyBind": "Bind",
+    "mod.graytan.direction_set": "§5Graytan §0§l| §fDirection set"
+}
