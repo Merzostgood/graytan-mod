@@ -18,7 +18,7 @@ public class KeyBind {
     private short modifier;
 
     public static KeyBind of(ModifierKeyCode modifierKeyCode) {
-        return new KeyBind();
+        return new KeyBind(modifierKeyCode.getKeyCode().getTranslationKey(), modifierKeyCode.getModifier().getValue());
     }
 
     public ModifierKeyCode toModifierKeyCode() {
