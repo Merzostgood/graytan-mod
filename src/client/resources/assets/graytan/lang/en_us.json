@@ -1,12 +1,15 @@
 {
     "text.autoconfig.graytan.title": "Graytan",
-    "text.autoconfig.graytan.option.anti_tp": "Enable anti teleport (WIP)",
-    "text.autoconfig.graytan.option.fault_max": "Max fault (WIP)",
+    "text.autoconfig.graytan.option.time": "Time left to turn completion",
     "text.autoconfig.graytan.option.places": "Places",
-    "text.autoconfig.graytan.option.ModPoint": "Place",
+    "text.autoconfig.graytan.option.ModPoint": "Point",
     "text.autoconfig.graytan.option.ModPoint.name": "Place name",
     "text.autoconfig.graytan.option.ModPoint.yaw": "Yaw",
     "text.autoconfig.graytan.option.ModPoint.pitch": "Pitch",
+    "text.autoconfig.graytan.option.time.@Tooltip": "Time in milliseconds after which yaw and pitch become -90. Specify -1 if you do not want to use this function.",
+    "text.autoconfig.graytan.option.ModPoint.name.@Tooltip": "Enter a place name so that you can use the /gtp {place name} command (WIP). You can only use [a-Z], [0-9], [ _ - ]. Otherwise, the place name will automatically change to another one.",
+    "text.autoconfig.graytan.option.ModPoint.yaw.@Tooltip": "Use F3 to find out your yaw. Usually yaw is indicated by the first value in the F3 direction (yaw, pitch).",
+    "text.autoconfig.graytan.option.ModPoint.pitch.@Tooltip": "Use F3 to find out your pitch. Usually pitch is indicated by the second value in the F3 direction (yaw, pitch)",
     "text.autoconfig.graytan.option.ModPoint.keyBind": "Bind",
-    "mod.graytan.direction_set": "§5Graytan §0§l| §fDirection set"
+    "mod.graytan.direction_set": "§5Graytan §0§l| §fDirection updated"
 }

@@ -1,16 +1,11 @@
 package net.adamcowell14.graytan.config;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
-import me.shedaniel.clothconfig2.api.Modifier;
 import me.shedaniel.clothconfig2.api.ModifierKeyCode;
+import me.shedaniel.clothconfig2.api.Modifier;
 import net.minecraft.client.util.InputUtil;
 import net.minecraft.text.Text;
+import lombok.*;
 
-@Getter
-@Setter
 @AllArgsConstructor
 @NoArgsConstructor
 public class KeyBind {

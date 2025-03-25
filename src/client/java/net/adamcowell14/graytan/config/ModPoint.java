@@ -1,14 +1,9 @@
 package net.adamcowell14.graytan.config;
 
-import lombok.*;
 import me.shedaniel.autoconfig.annotation.ConfigEntry;
 import me.shedaniel.clothconfig2.api.ModifierKeyCode;
 import net.adamcowell14.graytan.GraytanClient;
 
-@Getter
-@Setter
-@AllArgsConstructor
-@NoArgsConstructor
 public class ModPoint {
     @ConfigEntry.Gui.Tooltip
     private String name;
@@ -21,8 +16,21 @@ public class ModPoint {
 
     private KeyBind keyBind = GraytanClient.DEFAULT_KEYBIND;
 
-    public ModPoint(String name, float yaw, float pitch) {
-        this(name, yaw, pitch, GraytanClient.DEFAULT_KEYBIND);
+    public float getYaw() {
+        return yaw;
+    }
+    public float getPitch() {
+        return pitch;
+    }
+    public String getName() {
+        return name;
+    }
+    public KeyBind getKeyBind() {
+        return keyBind;
+    }
+
+    public void setName(String NewName) {
+        name = NewName;
     }
 
     public void setKeyBind(ModifierKeyCode modifierKeyCode) {

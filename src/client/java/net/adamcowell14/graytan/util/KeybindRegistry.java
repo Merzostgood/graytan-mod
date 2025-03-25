@@ -9,9 +9,7 @@ import net.adamcowell14.graytan.GraytanClient;
 import net.adamcowell14.graytan.config.KeyBind;
 import net.adamcowell14.graytan.config.ModConfig;
 import net.adamcowell14.graytan.config.ModPoint;
-import net.minecraft.client.util.InputUtil;
 import net.minecraft.text.Text;
-import org.lwjgl.glfw.GLFW;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -39,7 +37,7 @@ public class KeybindRegistry {
 
             for(ModPoint point : GraytanClient.CONFIG.places) {
                 if(point.getKeyBind().toModifierKeyCode().matchesCurrentKey() || point.getKeyBind().toModifierKeyCode().matchesCurrentMouse()) {
-                    GraytanClient.test(point);
+                    GraytanClient.direction(point);
                 }
             }
         });
