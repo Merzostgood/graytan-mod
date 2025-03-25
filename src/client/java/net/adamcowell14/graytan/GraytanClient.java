@@ -1,5 +1,6 @@
 package net.adamcowell14.graytan;
 
+import net.adamcowell14.graytan.util.CommandRegistry;
 import net.adamcowell14.graytan.util.KeybindRegistry;
 import net.adamcowell14.graytan.config.ModConfig;
 import net.adamcowell14.graytan.config.ModPoint;
@@ -47,6 +48,7 @@ public class GraytanClient implements ClientModInitializer {
             }
         }
 
+        CommandRegistry.register();
         KeybindRegistry.registerEvent();
 //        HudRenderCallback.EVENT.register(RenderOverlay::RenderGameOverlayEvent);
     }
@@ -63,6 +65,15 @@ public class GraytanClient implements ClientModInitializer {
         if (CONFIG.time != -1) {
             new UpdateRotate().start();
         }
+    }
+
+    public static ModPoint getPoint(String name) {
+        for (ModPoint point : CONFIG.places) {
+            if (point.getName().equals(name)) {
+                return point;
+            }
+        }
+        return null;
     }
 }
 
