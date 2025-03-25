@@ -12,5 +12,8 @@ public class ModConfig implements ConfigData {
     @ConfigEntry.Gui.Tooltip
     public int time = 3000;
 
+    @ConfigEntry.Gui.Tooltip
+    public boolean ms_lore_mode = true;
+
     public List<ModPoint> places = new ArrayList<>();
 }

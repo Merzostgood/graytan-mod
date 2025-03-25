@@ -22,7 +22,7 @@ public class TpCommand {
         String pointName = ctx.getArgument("name", String.class);
         ModPoint point = GraytanClient.getPoint(pointName);
         if (point == null) {
-            ctx.getSource().sendFeedback(Text.of("§5§lGraytan | §fPoint doesn't exist"));
+            ctx.getSource().sendFeedback(Text.of("§5Graytan | Point doesn't exist"));
             return 0;
         }
 

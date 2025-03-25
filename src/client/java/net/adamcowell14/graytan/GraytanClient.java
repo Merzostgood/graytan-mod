@@ -16,6 +16,10 @@ import me.shedaniel.clothconfig2.api.ModifierKeyCode;
 import me.shedaniel.autoconfig.ConfigHolder;
 import me.shedaniel.autoconfig.AutoConfig;
 
+import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.item.ItemStack;
+import net.minecraft.item.Items;
+
 import java.util.Objects;
 
 public class GraytanClient implements ClientModInitializer {
@@ -53,7 +57,29 @@ public class GraytanClient implements ClientModInitializer {
 //        HudRenderCallback.EVENT.register(RenderOverlay::RenderGameOverlayEvent);
     }
 
+    public static boolean hasCompassInHand(PlayerEntity player) {
+        ItemStack mainHandStack = player.getMainHandStack();
+        if (mainHandStack.getItem() == Items.COMPASS) {
+            return true;
+        }
+
+        ItemStack offHandStack = player.getOffHandStack();
+        return offHandStack.getItem() == Items.COMPASS;
+    }
+
     public static void direction(ModPoint point) {
+        assert MC.player != null;
+
+        if (CONFIG.ms_lore_mode && hasCompassInHand(MC.player)) {
+            direction_update(point);
+        } else if (!CONFIG.ms_lore_mode) {
+            direction_update(point);
+        } else {
+            MC.player.sendMessage(Text.translatable("mod.graytan.ms_mode_error"), false);
+        }
+    }
+
+    private static void direction_update(ModPoint point) {
         assert MC.player != null;
 
         MC.player.sendMessage(Text.translatable("mod.graytan.direction_set"), true);

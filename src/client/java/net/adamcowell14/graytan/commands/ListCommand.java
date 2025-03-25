@@ -9,7 +9,7 @@ import net.minecraft.text.Text;
 
 public class ListCommand {
     public static int run(CommandContext<FabricClientCommandSource> ctx) {
-        StringBuilder message = new StringBuilder("§5§lGraytan | List of all places:§f\n");
+        StringBuilder message = new StringBuilder("§5Graytan | List of all places:§f\n");
         for (ModPoint point : GraytanClient.CONFIG.places) {
             message.append(point.getName()).append(" - yaw: ").append(point.getYaw()).append(", pitch: ").append(point.getPitch()).append("\n");
         }

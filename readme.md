@@ -1,9 +1,10 @@
-# Graytan mod v1.2
+# Graytan mod v1.2.1
 ## Mod functions
 - Unlimited number of points / places
 - Setting up binds for each point
 - Auto 2FA added (for Mirror Pylon v4 and above)
 - Commands list, tp
+- MineShield 4 LORE MODE (SHTOOOOOOOOO)
 ## Small documentation of the mod
 1. The mod has its own commands /gtp, /graytan, /gteleport, /graytantp (you can use any of these "prefixes").
 2. Subcommands:
